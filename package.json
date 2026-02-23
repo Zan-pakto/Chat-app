@@ -6,7 +6,7 @@
     "dev": "npm run dev:frontend",
     "dev:frontend": "next dev",
     "dev:backend": "npx convex dev",
-    "build": "next build",
+    "build": "npx convex deploy && next build",
     "start": "next start",
     "lint": "next lint",
     "postinstall": "npx convex codegen"
