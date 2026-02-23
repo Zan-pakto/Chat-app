@@ -11,6 +11,7 @@ import { Trash2 } from "lucide-react";
 
 interface MessageListProps {
   conversationId: Id<"conversations">;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   messages: any[];
 }
 
@@ -60,6 +61,7 @@ export function MessageList({ conversationId, messages }: MessageListProps) {
           // Group reactions by emoji
           const reactionCounts: Record<string, { count: number; hasReacted: boolean }> = {};
           if (message.reactions) {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             message.reactions.forEach((r: any) => {
               if (!reactionCounts[r.emoji]) reactionCounts[r.emoji] = { count: 0, hasReacted: false };
               reactionCounts[r.emoji].count++;
