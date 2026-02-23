@@ -8,8 +8,7 @@
     "dev:backend": "npx convex dev",
     "build": "npx convex deploy && next build",
     "start": "next start",
-    "lint": "next lint",
-    "postinstall": "npx convex codegen"
+    "lint": "next lint"
   },
   "dependencies": {
     "@clerk/nextjs": "^5.7.0",
