@@ -4,7 +4,7 @@ import { useQuery, useMutation } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import { Id } from "../../../convex/_generated/dataModel";
 import { UserButton } from "@clerk/nextjs";
-import { Loader2, MessageSquare, Search, PlusCircle, Users } from "lucide-react";
+import { MessageSquare, Search, PlusCircle, Users } from "lucide-react";
 import { useState } from "react";
 import { formatTimestamp } from "@/lib/date-utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";

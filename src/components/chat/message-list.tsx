@@ -3,12 +3,11 @@
 import { useQuery, useMutation } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import { Id } from "../../../convex/_generated/dataModel";
-import { useEffect, useRef, useState } from "react";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { useEffect, useRef, useState, UIEvent } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { formatTimestamp } from "@/lib/date-utils";
 import { cn } from "@/lib/utils";
-import { SmilePlus, Trash2 } from "lucide-react";
+import { Trash2 } from "lucide-react";
 
 interface MessageListProps {
   conversationId: Id<"conversations">;
@@ -38,7 +37,7 @@ export function MessageList({ conversationId, messages }: MessageListProps) {
     }
   }, [messages, typingStatus, isScrolledUp]);
 
-  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+  const handleScroll = (e: UIEvent<HTMLDivElement>) => {
     const target = e.target as HTMLDivElement;
     const isAtBottom = target.scrollHeight - target.scrollTop === target.clientHeight;
     setIsScrolledUp(!isAtBottom);
